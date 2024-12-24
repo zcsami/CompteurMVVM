@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CompteurMVVMApp: App {
+
+    @StateObject var viewModel = CompteurViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CompteurView(viewModel: viewModel)
         }
     }
 }
